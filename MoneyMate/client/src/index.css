@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom budget tracker colors */
+  --income: 142 71% 45%;
+  --expense: 0 84% 60%;
+  
+  /* Chart colors */
+  --chart-food: 35 92% 51%;         /* #F59E0B */
+  --chart-bills: 263 70% 63%;       /* #8B5CF6 */
+  --chart-entertainment: 328 86% 62%; /* #EC4899 */
+  --chart-transport: 217 91% 60%;   /* #3B82F6 */
+  --chart-health: 157 73% 45%;      /* #10B981 */
+  --chart-education: 234 89% 73%;   /* #6366F1 */
+  --chart-shopping: 28 92% 53%;     /* #F97316 */
+  --chart-housing: 220 8% 35%;      /* #4B5563 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-100 text-foreground;
+  }
+}
+
+/* Custom styles for budget tracker */
+.text-income {
+  @apply text-emerald-500;
+}
+
+.text-expense {
+  @apply text-red-500;
+}
+
+.bg-income {
+  @apply bg-emerald-500;
+}
+
+.bg-expense {
+  @apply bg-red-500;
+}
+
+/* Category colors */
+.category-food { @apply bg-[#F59E0B]; }
+.category-bills { @apply bg-[#8B5CF6]; }
+.category-entertainment { @apply bg-[#EC4899]; }
+.category-transport { @apply bg-[#3B82F6]; }
+.category-health { @apply bg-[#10B981]; }
+.category-education { @apply bg-[#6366F1]; }
+.category-shopping { @apply bg-[#F97316]; }
+.category-housing { @apply bg-[#4B5563]; }
